@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DisplayResult from './Components/displayResult';
 
 class App extends Component {
   constructor(props) {
@@ -21,6 +22,11 @@ class App extends Component {
           <label>compScore</label>
           <input name="compScore" value={this.state.compScore} onChange={ (e) => this.setState({ compScore: e.target.value })} />
         </div>
+
+        <DisplayResult
+        userScore={this.state.userScore}
+        compScore={this.state.compScore}
+        />
       </>
     );
   }
